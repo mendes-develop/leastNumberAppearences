@@ -15,6 +15,12 @@ function getKeysByValue(object, value) {
   return Object.keys(object).filter(key => object[key] === value);
 }
 
+function leastNumberAppearences(arr){
+  let count = getCount(arr)
+  let leastVal = getLeast(count)
+  return getKeysByValue(count, leastVal)
+}
+
 let count = getCount(arr)
 let leastVal = getLeast(count)
 let repeatLeast = getKeysByValue(count, leastVal)
@@ -24,3 +30,5 @@ console.log('----------------------------------')
 console.log(leastVal)
 console.log('----------------------------------')
 console.log(repeatLeast)
+console.log('----------------------------------')
+leastNumberAppearences(arr)
